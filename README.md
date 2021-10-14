@@ -2,7 +2,7 @@
 
 ![Alt text](media/teaser.jpg?raw=true "Title")
 
-This repository contains code for reproducing the results for probabilistic implicit scene completion, submitted to ICLR 2022.
+This repository contains code for reproducing the results for [probabilistic implicit scene completion](https://openreview.net/forum?id=BnQhMqDfcKG), submitted to ICLR 2022.
 Currently, this repo contains training and testing results on ShapeNet sofa dataset for our model, named continuous Generative Cellular Automata (cGCA).
 
 
