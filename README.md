@@ -35,7 +35,7 @@ The repo was tested with NVIDIA 2080ti GPU (11GB).
 
 2. **Data preparation and Pretrained Models**
 
-Download the [link](https://drive.google.com/file/d/1qF-F2FWMMUWhtoYbq-ViqUPc5tGma58v/view?usp=sharing) for ShapeNet sofa dataset and its preprocessed sparse voxel embedding.
+Download the [link](https://drive.google.com/file/d/1QnrPQQEeeasGmrcBf2yu0T2YvAVI8GqJ/view?usp=sharing) for ShapeNet sofa dataset and its preprocessed sparse voxel embedding.
 The pretrained models are in the [link](https://drive.google.com/file/d/1qF-F2FWMMUWhtoYbq-ViqUPc5tGma58v/view?usp=sharing).
 Place the files in the repo root.
 The directory should look like the following:
