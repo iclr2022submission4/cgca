@@ -1,7 +1,5 @@
 # Code for Probabilistic Implicit Scene Completion (ICLR 2022, Submission 4)
 
-![Alt text](media/chair_completion.gif?raw=true "Title")
-
 
 
 ![Alt text](media/teaser.jpg?raw=true "Title")
