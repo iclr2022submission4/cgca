@@ -1,5 +1,9 @@
 # Code for Probabilistic Implicit Scene Completion (ICLR 2022, Submission 4)
 
+![Alt text](media/chair_completion.gif?raw=true "Title")
+
+
+
 ![Alt text](media/teaser.jpg?raw=true "Title")
 
 This repository contains code for reproducing the results for [probabilistic implicit scene completion](https://openreview.net/forum?id=BnQhMqDfcKG), submitted to ICLR 2022.
@@ -29,7 +33,7 @@ pip install ./ -v --no-deps --install-option="--blas=openblas" --install-option=
 # install all other requirements
 pip install -r requirements.txt
 ```
-If installing the MinkowskiEngine in version 0.5.0 does not work, please refer to the original [MinkowskiEngine](https://github.com/NVIDIA/MinkowskiEngine) repo.
+Please install [MinkowskiEngine](https://github.com/NVIDIA/MinkowskiEngine) in version 0.5.0, otherwise the code might not work as expected.
 The repo was tested with NVIDIA 2080ti GPU (11GB).
 
 
@@ -39,6 +43,7 @@ Download the [link](https://drive.google.com/file/d/1QnrPQQEeeasGmrcBf2yu0T2YvAV
 The pretrained models are in the [link](https://drive.google.com/file/d/1qF-F2FWMMUWhtoYbq-ViqUPc5tGma58v/view?usp=sharing).
 Place the files in the repo root.
 The directory should look like the following:
+
 ```
 \cgca
    - main.py
@@ -96,12 +101,25 @@ python main --test --resume-ckpt pretrained_models/sofa_transition/ckpts/ckpt-st
 
 This procedure decodes the cached sparse voxel embedding s^{T+T'}.
 You can find the reconstructed meshes (obj files) in the `log/sofa_test/test_save/step-200000/mesh/initial_mesh` folder.
+
 ```
 python main --test --resume-ckpt pretrained_models/sofa_transition/ckpts/ckpt-step-200000 --override "cache_only=False" -l log/sofa_test
 ```
 
 
+
+# Training GCA
+
+We also added the code for baseline the original [Generative Cellular Automata](https://openreview.net/forum?id=rABUmU3ulQh) (GCA), published at ICLR 2021. You can train the model by running 
+
+```
+python main --config configs/gca-sofa.yaml -l log/gca-sofa
+```
+
+
+
 ## Citation
+
 If you find this repo useful for your research, please cite 
 ```
 @inproceedings{
